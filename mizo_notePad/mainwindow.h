@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFontComboBox>
+#include <QSpinBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +21,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QFontComboBox *font_box;
+    QSpinBox *fontSize_SB; // font size spin box
+
+    void init_widget();
 };
 #endif // MAINWINDOW_H
