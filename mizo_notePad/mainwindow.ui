@@ -47,6 +47,12 @@
     <property name="title">
      <string>Edit</string>
     </property>
+    <widget class="QMenu" name="menuFormat">
+     <property name="title">
+      <string>Format</string>
+     </property>
+     <addaction name="actionColour"/>
+    </widget>
     <addaction name="actionUndo"/>
     <addaction name="actionRedo"/>
     <addaction name="separator"/>
@@ -57,9 +63,22 @@
     <addaction name="separator"/>
     <addaction name="actionFind_Replace"/>
     <addaction name="actionSelect_All"/>
+    <addaction name="separator"/>
+    <addaction name="menuFormat"/>
+   </widget>
+   <widget class="QMenu" name="menuFormat_2">
+    <property name="title">
+     <string>Format</string>
+    </property>
+    <addaction name="actionBold"/>
+    <addaction name="actionItalix"/>
+    <addaction name="actionUnderline"/>
+    <addaction name="actionStrikeout"/>
+    <addaction name="separator"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
+   <addaction name="menuFormat_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -199,7 +218,50 @@
     <string>Select All</string>
    </property>
   </action>
+  <action name="actionColour">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/colour.png</normaloff>:/image/colour.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colour</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FormatTextBold"/>
+   </property>
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionItalix">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FormatTextItalic"/>
+   </property>
+   <property name="text">
+    <string>Italic</string>
+   </property>
+  </action>
+  <action name="actionUnderline">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FormatTextUnderline"/>
+   </property>
+   <property name="text">
+    <string>Underline</string>
+   </property>
+  </action>
+  <action name="actionStrikeout">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FormatTextStrikethrough"/>
+   </property>
+   <property name="text">
+    <string>Strikeout</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
