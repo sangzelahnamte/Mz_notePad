@@ -21,7 +21,19 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_actionColour_triggered();
+    void on_actionColour_triggered(); // Colour
+    void on_actionBold_triggered(); // Bold
+    void on_actionItalix_triggered(); // Italic
+    void on_actionUnderline_triggered(); // Underline
+    void on_actionStrikeout_triggered(); // StrikeOut
+
+    void on_actionAlign_center_triggered();
+
+    void on_actionAlign_Left_triggered();
+
+    void on_actionAlign_right_triggered();
+
+    void on_actionAlign_justify_triggered();
 
 private:
     Ui::MainWindow *ui;

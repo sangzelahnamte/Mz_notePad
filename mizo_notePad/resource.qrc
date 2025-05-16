@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>image/colour.png</file>
+        <file>image/text_strikethrough.png</file>
     </qresource>
 </RCC>

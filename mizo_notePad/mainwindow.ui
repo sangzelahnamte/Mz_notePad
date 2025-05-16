@@ -75,6 +75,10 @@
     <addaction name="actionUnderline"/>
     <addaction name="actionStrikeout"/>
     <addaction name="separator"/>
+    <addaction name="actionAlign_center"/>
+    <addaction name="actionAlign_Left"/>
+    <addaction name="actionAlign_right"/>
+    <addaction name="actionAlign_justify"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -253,10 +257,43 @@
   </action>
   <action name="actionStrikeout">
    <property name="icon">
-    <iconset theme="QIcon::ThemeIcon::FormatTextStrikethrough"/>
+    <iconset theme="QIcon::ThemeIcon::FormatTextStrikethrough" resource="resource.qrc">
+     <normaloff>:/image/text_strikethrough.png</normaloff>:/image/text_strikethrough.png</iconset>
    </property>
    <property name="text">
     <string>Strikeout</string>
+   </property>
+  </action>
+  <action name="actionAlign_center">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FormatJustifyCenter"/>
+   </property>
+   <property name="text">
+    <string>Align center</string>
+   </property>
+  </action>
+  <action name="actionAlign_Left">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FormatJustifyLeft"/>
+   </property>
+   <property name="text">
+    <string>Align Left</string>
+   </property>
+  </action>
+  <action name="actionAlign_right">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FormatJustifyRight"/>
+   </property>
+   <property name="text">
+    <string>Align right</string>
+   </property>
+  </action>
+  <action name="actionAlign_justify">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FormatJustifyCenter"/>
+   </property>
+   <property name="text">
+    <string>Align justify</string>
    </property>
   </action>
  </widget>
