@@ -5,6 +5,8 @@
 #include <QFontComboBox>
 #include <QSpinBox>
 #include <QColorDialog>
+#include <QFileDialog>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -43,5 +45,8 @@ private:
 
     void init_widget();
     void setup_connections();
+
+    void new_file();
+    void open_file();
 };
 #endif // MAINWINDOW_H

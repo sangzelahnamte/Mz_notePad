@@ -54,6 +54,30 @@ void MainWindow::setup_connections()
     connect(ui->actionCopy, &QAction::triggered, ui->textEdit, &QTextEdit::copy);
     connect(ui->actionPaste, &QAction::triggered, ui->textEdit, &QTextEdit::paste);
     connect(ui->actionSelect_All, &QAction::triggered, ui->textEdit, &QTextEdit::selectAll);
+    // Open file
+    connect(ui->actionNew, &QAction::triggered, this, &MainWindow::new_file);
+    connect(ui->actionOpen, &QAction::triggered, this, &MainWindow::open_file);
+}
+
+void MainWindow::new_file()
+{
+    ui->textEdit->clear();
+    ui->statusbar->showMessage("New file");
+}
+
+void MainWindow::open_file()
+{
+    QString file_path = QFileDialog::getOpenFileName(this, "Open file", QString(), "Text file (*txt)");
+    QFile file(file_path);
+    if(file_path.isEmpty()) return;
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        QMessageBox::critical(this, "File error", file.errorString());
+        return;
+    }
+    QTextStream in(&file);
+    ui->textEdit->setPlainText(in.readAll());
+    file.close();
 }
 
 void MainWindow::on_actionBold_triggered()
